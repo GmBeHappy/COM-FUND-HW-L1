@@ -1,8 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 int main() {
-	int num,i=2,j,isPrime,x;
+	int num,i=2,j,isPrime,x,k=0;
+    printf("Enter number : ");
 	scanf("%d", &num);
+    printf("Factoring Result : ");
     x = num;
     while (i <= num)
     {
@@ -19,9 +21,11 @@ int main() {
             }
             if (isPrime == 1)
             {
-                printf("%d, ", i);
+                if (k == 0) printf("%d ", i); k = 1;
+                printf("x %d ", i);
                 x = x / i;
             }
+            
         }
         else{
             i++;
